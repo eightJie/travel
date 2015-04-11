@@ -1,0 +1,650 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+h3 {
+    margin: 0;
+}
+p {
+    margin: 0;
+}
+body.debug .page {
+    border-bottom: 10px dashed #000;
+}
+.nav {
+    display: none;
+}
+body.debug .nav {
+    position: fixed;
+    left: 0;
+    top: 100px;
+    z-index: 9999;
+    display: block;
+}
+
+.wrap{
+  color: #322e2f;
+  position: absolute;
+  width: 640px;
+  height: 100%;
+  overflow: hidden;
+  left: 50%;
+  margin-left: -320px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.swiper-container{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(res/bg.png) repeat-y center center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    text-align: center;
+    margin: 0;
+}
+
+.page .content {
+    position: relative;
+    margin: 0 auto;
+    width: 450px;
+    text-align: left;
+}
+.order1 {
+    -webkit-animation-delay: 0s;
+}
+.order2 {
+    -webkit-animation-delay: 0.5s;
+}
+.order3 {
+    -webkit-animation-delay: 1s;
+}
+.order4 {
+    -webkit-animation-delay: 1.5s;
+}
+.order5 {
+    -webkit-animation-delay: 2s;
+}
+.order6 {
+    -webkit-animation-delay: 2.5s;
+}
+.page-label {
+    width: 163px;
+    height: 43px;
+    background: url(res/go-for-freedom.png) no-repeat left top;
+}
+.fella-luggage {
+    width: 114px;
+    height: 174px;
+    background: url(res/fella-luggage.png) no-repeat left top;
+}
+.moving-train {
+    width: 1211px;
+    height: 603px;
+    background: url(res/train.png) no-repeat left top;
+    zoom: 0.3;
+}
+.dotted-line-1 {
+    width: 120px;
+    height: 121px;
+    background: url(res/dotted-line-1.png) no-repeat left top;
+}
+.dotted-line-2 {
+    width: 131px;
+    height: 143px;
+    background: url(res/dotted-line-2.png) no-repeat left top;
+}
+.dotted-line-3 {
+    width: 72px;
+    height: 53px;
+    background: url(res/dotted-line-3.png) no-repeat left top;
+}
+.dotted-line-4 {
+    width: 129px;
+    height: 163px;
+    background: url(res/dotted-line-4.png) no-repeat left top;
+}
+.photo-caption {
+    font-family: 'Comic Sans MS';
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.photo-caption h3 {
+    font-size: 1.5em;
+}
+.chinese-text {
+    margin: 10px 0;
+    line-height: 1.4;
+}
+.iron-tower {
+    width: 41px;
+    height: 77px;
+    background: url(res/tower.png) no-repeat left top;
+}
+.luggage-bag {
+    width: 53px;
+    height: 49px;
+    background: url(res/bag.png) no-repeat left top;
+}
+.luggage-box {
+    width: 50px;
+    height: 66px;
+    background: url(res/luggage.png) no-repeat left top;
+}
+.fella-back {
+    width: 191px;
+    height: 161px;
+    background: url(res/fella-back.png) no-repeat left top;
+}
+.flying-plane {
+    width: 207px;
+    height: 67px;
+    background: url(res/plane.png) no-repeat left top;
+}
+.photo-paper {
+    position: relative;
+    margin: 1em 0;
+    border: 10px solid #FFF;
+    width: 100%;
+    height: 550px;
+}
+.photo-paper img {
+    display: block;
+    width: 100%;
+}
+.photo-paper:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    width: 40px;
+    height: 42px;
+    background: url(res/photo-corner-tl.png) no-repeat left top;
+}
+.photo-paper:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 40px;
+    height: 42px;
+    background: url(res/photo-corner-tr.png) no-repeat right top;
+}
+.photo-paper .photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.photo-paper .photo:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -12px;
+    left: -12px;
+    width: 42px;
+    height: 40px;
+    background: url(res/photo-corner-bl.png) no-repeat right top;
+}
+.photo-paper .photo:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -12px;
+    right: -12px;
+    width: 42px;
+    height: 40px;
+    background: url(res/photo-corner-br.png) no-repeat right top;
+}
+.cloud-kit {
+    width: 142px;
+    height: 62px;
+    background: url(res/cloud.png) no-repeat center center;
+}
+.cloud-kit-2 {
+    width: 67px;
+    height: 25px;
+    background: url(res/cloud-2.png) no-repeat center center;
+}
+.cover-headline {
+    width: 352px;
+    height: 134px;
+    text-align: center;
+    line-height: 134px;
+    background: url(res/cloud-border.png) no-repeat center center;
+    font-size: 2em;
+}
+.cover-title {
+    width: 388px;
+    height: 129px;
+    background: url(res/travel-title.png) no-repeat center center;
+}
+.cover-subtitle {
+    width: 135px;
+    height: 26px;
+    background: url(res/travel-subtitle.png) no-repeat center center;
+    padding-top: 40px;
+}
+.back-walk {
+    width: 132px;
+    height: 172px;
+    -webkit-animation: back-walk 1s;
+    -webkit-animation-iteration-count: infinite;
+}
+.bike-girl {
+    width: 104px;
+    height: 104px;
+    -webkit-animation: bike-girl 1s;
+    -webkit-animation-iteration-count: infinite;
+}
+.walk-fella {
+    width: 159px;
+    height: 289px;
+    transform: scale(.5);
+    -webkit-animation: fella-walk 1s;
+    -webkit-animation-iteration-count: infinite;
+}
+.rotate-earth {
+    width: 340px;
+    height: 210px;
+    -webkit-animation: earth-rotate 3s;
+    -webkit-animation-iteration-count: infinite;
+}
+.typing {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0;
+    -webkit-animation-name: typing;
+    -webkit-animation-duration: 0.5s;
+}
+@-webkit-keyframes back-walk {
+    0% {
+        background-image: url(res/back-walk/back-walk-1.png);
+    }
+    10% {
+        background-image: url(res/back-walk/back-walk-2.png);
+    }
+    20% {
+        background-image: url(res/back-walk/back-walk-3.png);
+    }
+    30% {
+        background-image: url(res/back-walk/back-walk-4.png);
+    }
+    40% {
+        background-image: url(res/back-walk/back-walk-5.png);
+    }
+    50% {
+        background-image: url(res/back-walk/back-walk-6.png);
+    }
+    60% {
+        background-image: url(res/back-walk/back-walk-7.png);
+    }
+    70% {
+        background-image: url(res/back-walk/back-walk-8.png);
+    }
+    80% {
+        background-image: url(res/back-walk/back-walk-9.png);
+    }
+    90% {
+        background-image: url(res/back-walk/back-walk-10.png);
+    }
+    100% {
+        background-image: url(res/back-walk/back-walk-1.png);
+    }
+}
+@-webkit-keyframes bike-girl {
+    0% {
+        background-image: url(res/bike-girl/bike-girl-1.png);
+    }
+    25% {
+        background-image: url(res/bike-girl/bike-girl-2.png);
+    }
+    50% {
+        background-image: url(res/bike-girl/bike-girl-3.png);
+    }
+    75% {
+        background-image: url(res/bike-girl/bike-girl-4.png);
+    }
+    100% {
+        background-image: url(res/bike-girl/bike-girl-1.png);
+    }
+}
+@-webkit-keyframes fella-walk {
+    0% {
+        background-image: url(res/fella1.png);
+    }
+    50% {
+        background-image: url(res/fella2.png);
+    }
+    100% {
+        background-image: url(res/fella1.png);
+    }
+}
+@-webkit-keyframes earth-rotate {
+    0% {
+        background-image: url(res/earth/earth1.png);
+    }
+    4.4% {
+        background-image: url(res/earth/earth2.png);
+    }
+    8.7% {
+        background-image: url(res/earth/earth3.png);
+    }
+    13% {
+        background-image: url(res/earth/earth4.png);
+    }
+    17.4% {
+        background-image: url(res/earth/earth5.png);
+    }
+    21.7% {
+        background-image: url(res/earth/earth6.png);
+    }
+    26% {
+        background-image: url(res/earth/earth7.png);
+    }
+    30.4% {
+        background-image: url(res/earth/earth8.png);
+    }
+    34.8% {
+        background-image: url(res/earth/earth9.png);
+    }
+    39.1% {
+        background-image: url(res/earth/earth10.png);
+    }
+    43.5% {
+        background-image: url(res/earth/earth11.png);
+    }
+    47.8% {
+        background-image: url(res/earth/earth12.png);
+    }
+    52.2% {
+        background-image: url(res/earth/earth13.png);
+    }
+    56.5% {
+        background-image: url(res/earth/earth14.png);
+    }
+    60.9% {
+        background-image: url(res/earth/earth15.png);
+    }
+    65.2% {
+        background-image: url(res/earth/earth16.png);
+    }
+    69.6% {
+        background-image: url(res/earth/earth17.png);
+    }
+    73.9% {
+        background-image: url(res/earth/earth18.png);
+    }
+    78.3% {
+        background-image: url(res/earth/earth19.png);
+    }
+    82.6% {
+        background-image: url(res/earth/earth20.png);
+    }
+    87% {
+        background-image: url(res/earth/earth21.png);
+    }
+    91.3% {
+        background-image: url(res/earth/earth22.png);
+    }
+    95.7% {
+        background-image: url(res/earth/earth23.png);
+    }
+    100% {
+        background-image: url(res/earth/earth1.png);
+    }
+}
+@-webkit-keyframes rollIn1 {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+        transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: rotate(10deg);
+        transform: rotate(10deg);
+    }
+}
+@-webkit-keyframes rollIn2 {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+        transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: rotate(5deg);
+        transform: rotate(5deg);
+    }
+}
+@-webkit-keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+@-webkit-keyframes with-caret {
+    from, to {
+        border-color: transparent
+    }
+    50% {
+        border-color: black
+    }
+}
+@media all and (orientation: landscape) {
+    .page .content {
+        width: 500px;
+    }
+    .photo-paper {
+        height: 400px;
+    }
+}
+.page-cover {
+    padding-top: 100px;
+}
+.page-cover * {
+    margin: auto;
+}
+.page-cover .cloud-kit {
+    position: absolute;
+}
+.page-cover .walk-fella {
+    margin-bottom: -154px;
+}
+.page-cover .cloud-1 {
+    top: 50px;
+    left: 100px;
+    -webkit-animation-delay: .6s;
+}
+.page-cover .cloud-2 {
+    top: 30px;
+    left: 200px;
+    transform: scale(0.5);
+    -webkit-animation-delay: .7s;
+}
+.page-cover .cloud-3 {
+    top: 40px;
+    right: 150px;
+    transform: scale(0.4);
+    -webkit-animation-delay: .8s;
+}
+.page-cover .cloud-4 {
+    top: 30px;
+    right: 80px;
+    transform: scale(0.3);
+}
+.page1 .page-label {
+    position: absolute;
+    right: 2%;
+    top: 2%;
+}
+.page1 .content {
+    padding-bottom: 150px;
+    padding-top: 10%;
+}
+.page1 .fella-luggage {
+    position: absolute;
+    right: 100px;
+    bottom: 0;
+}
+.page1 .dotted-line-1 {
+    position: absolute;
+    right: 0;
+    bottom: 80px;
+}
+.page2 {
+    padding-top: 10px;
+    padding-bottom: 180px;
+}
+.page2 .page-label {
+    position: absolute;
+    left: 2%;
+    bottom: 2%;
+}
+.page2 .moving-train {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.page2 .dotted-line-2 {
+    position: absolute;
+    right: 10%;
+    bottom: 180px;
+}
+.page2 .luggage-bag {
+    display: inline-block;
+    vertical-align: middle;
+}
+.page3 {
+    padding-top: 100px;
+    padding-bottom: 120px;
+}
+.page3 .iron-tower {
+    position: absolute;
+    top: 60px;
+    left: 150px;
+}
+.page3 .cloud-kit-2 {
+    position: absolute;
+    right: 10%;
+    top: 50px;
+}
+.page3 .dotted-line-3 {
+    position: absolute;
+    top: 135px;
+    left: 100px;
+}
+.page3 .photo-caption {
+    text-align: right;
+}
+.page3 .page-label {
+    position: absolute;
+    left: 12%;
+    bottom: 2%;
+}
+.page3 .fella-back {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+}
+.page4 {
+    padding-top: 120px;
+    padding-bottom: 20px;
+}
+.page4 .flying-plane {
+    position: absolute;
+    top: 30px;
+    left: 100px;
+}
+.page4 .dotted-line-4 {
+    position: absolute;
+    top: 90px;
+    left: 100px;
+}
+.page4 .photo-caption {
+    text-align: right;
+}
+.page4 .chinese-text {
+    text-align: right;
+}
+.page5 {
+    padding-top: 50px;
+    padding-bottom: 120px;
+}
+.page5 .page-label {
+    position: absolute;
+    top: 10px;
+    left: 10%;
+}
+.page5 .luggage-box {
+    float: right;
+    margin-left: 10px;
+}
+.page5 .photo-caption {
+    text-align: right;
+}
+.page5 .chinese-text {
+    text-align: right;
+}
+.page5 .chinese-text p {
+    margin: 0 0 0 auto;
+}
+.page5 .back-walk {
+    position: absolute;
+    zoom: 2;
+    left: 12%;
+    bottom: 0;
+}
+.page6 {
+    padding-top: 50px;
+}
+.page6 .page-label {
+    position: absolute;
+    right: 10%;
+    top: 10px;
+}
+.page6 .photo-caption {
+    text-align: right;
+}
+.page6 .chinese-text {
+    text-align: right;
+}
+.page6 .content {
+    padding-top: 650px;
+}
+@media all and (orientation: landscape) {
+    .page6 .content {
+        padding-top: 500px;
+    }
+}
+.page6 .photo-paper {
+    position: absolute;
+    top: 0;
+    margin-right: 5%;
+}
+.page6 .photo-1 {
+    margin-left: 2%;
+    -webkit-animation-name: rollIn1;
+}
+.page6 .photo-2 {
+    margin-left: 2%;
+    -webkit-animation-name: rollIn2;
+}
+.page6 .photo-3 {} .page6 .bike-girl {
+    position: absolute;
+    left: 12%;
+    bottom: 10px;
+}
