@@ -59,17 +59,42 @@ body.debug .nav {
         .photo-paper {
             position: relative;
             margin: 1em 0;
-            border: 10px solid #FFF;
-            width: 480px;
-            height: 620px;
+            width: 100%;
+            height: 640px;
+            background-color: #FFF;
+            .photo-wrapper {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+            .photo {
+                display: block;
+                width: 480px;
+                height: 620px;
+                overflow: hidden;
+                position: relative;
+                top: 10px;
+                left: 10px;
+            }
         }
-        &.horizontal {
+    }
+    .chinese-text {
+        left: 10%;
+    }
+    &.horizontal {
+        .content {
             width: 600px;
             margin-top: 40px;
             .photo-paper {
-                width: 580px;
                 height: 450px;
+                .photo {
+                    width: 580px;
+                    height: 430px;
+                }
             }
+        }
+        .chinese-text {
+            left: 3%;
         }
     }
 }
@@ -137,6 +162,8 @@ body.debug .nav {
     font-size: 1.5em;
 }
 .chinese-text {
+    position: absolute;
+    text-align: left;
     margin: 10px 0;
     line-height: 1.4;
 }
@@ -166,15 +193,14 @@ body.debug .nav {
     background: url(res/plane.png) no-repeat left top;
 }
 .photo-paper img {
-    display: block;
-    width: 100%;
+    position: absolute;
 }
 .photo-paper:before {
     content: '';
     display: block;
     position: absolute;
-    top: -12px;
-    left: -12px;
+    top: -2px;
+    left: -2px;
     width: 40px;
     height: 42px;
     background: url(res/photo-corner-tl.png) no-repeat left top;
@@ -183,34 +209,28 @@ body.debug .nav {
     content: '';
     display: block;
     position: absolute;
-    top: -12px;
-    right: -12px;
+    top: -2px;
+    right: -2px;
     width: 40px;
     height: 42px;
     background: url(res/photo-corner-tr.png) no-repeat right top;
 }
-.photo-paper .photo {
-    display: block;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-.photo-paper .photo:before {
+.photo-paper .photo-wrapper:before {
     content: '';
     display: block;
     position: absolute;
-    bottom: -12px;
-    left: -12px;
+    bottom: -2px;
+    left: -2px;
     width: 42px;
     height: 40px;
     background: url(res/photo-corner-bl.png) no-repeat right top;
 }
-.photo-paper .photo:after {
+.photo-paper .photo-wrapper:after {
     content: '';
     display: block;
     position: absolute;
-    bottom: -12px;
-    right: -12px;
+    bottom: -2px;
+    right: -2px;
     width: 42px;
     height: 40px;
     background: url(res/photo-corner-br.png) no-repeat right top;
@@ -506,10 +526,22 @@ body.debug .nav {
     right: 2%;
     top: 2%;
 }
-.page1 .content {
-    margin-bottom: 150px;
+.page1 {
+    .content {
+        margin-bottom: 150px;
+    }
     &.horizontal {
-        margin-top: 100px;
+        .content {
+            margin-top: 100px;
+        }
+    }
+    .chinese-text {
+        top: 760px;
+    }
+    &.horizontal {
+        .chinese-text {
+            top: 680px;
+        }
     }
 }
 .page1 .fella-luggage {
@@ -523,10 +555,16 @@ body.debug .nav {
     bottom: 0;
 }
 .page2 {
-    .content {
-        &.horizontal {
+    &.horizontal {
+        .content {
             margin-top: 80px;
         }
+        .chinese-text {
+            top: 700px;
+        }
+    }
+    .chinese-text {
+        top: 780px;
     }
 }
 .page2 .page-label {
@@ -551,9 +589,17 @@ body.debug .nav {
 .page3 {
     .content {
         margin-top: 40px;
-        &.horizontal {
+    }
+    &.horizontal {
+        .content {
             margin-top: 80px;
         }
+        .chinese-text {
+            top: 680px;
+        }
+    }
+    .chinese-text {
+        top: 800px;
     }
 }
 .page3 .iron-tower {
@@ -587,14 +633,28 @@ body.debug .nav {
 .page4 {
     .content {
         margin-top: 30px;
-        &.horizontal {
+    }
+    &.horizontal {
+        .content {
             margin-top: 100px;
         }
+        .chinese-text {
+            right: 3%;
+            top: 200px;
+        }
+    }
+    .photo-caption {
+        margin-bottom: 100px;
     }
     .page-label {
         position: absolute;
         bottom: 30px;
         left: 40%;
+    }
+    .chinese-text {
+        right: 10%;
+        top: 140px;
+        text-align: right;
     }
 }
 .page4 .flying-plane {
@@ -610,15 +670,23 @@ body.debug .nav {
 .page4 .photo-caption {
     text-align: right;
 }
-.page4 .chinese-text {
-    text-align: right;
-}
 .page5 {
     .content {
         margin-top: 80px;
-        &.horizontal {
+    }
+    &.horizontal {
+        .content {
             margin-top: 120px;
         }
+        .chinese-text {
+            right: 3%;
+            top: 750px;
+        }
+    }
+    .chinese-text {
+        right: 10%;
+        top: 850px;
+        text-align: right;
     }
 }
 .page5 .page-label {
@@ -633,9 +701,6 @@ body.debug .nav {
 .page5 .photo-caption {
     text-align: right;
 }
-.page5 .chinese-text {
-    text-align: right;
-}
 .page5 .chinese-text p {
     margin: 0 0 0 auto;
 }
@@ -648,6 +713,29 @@ body.debug .nav {
 .page6 {
     .content {
         margin-top: 50px;
+        padding-top: 720px;
+        .photo-paper {
+            position: absolute;
+            top: 0;
+            margin-right: 5%;
+        }
+    }
+    &.horizontal {
+        .content {
+            padding-top: 640px;
+        }
+        .photo-paper {
+            top: 60px;
+        }
+        .chinese-text {
+            right: 3%;
+            top: 760px;
+        }
+    }
+    .chinese-text {
+        right: 10%;
+        top: 860px;
+        text-align: right;
     }
 }
 .page6 .page-label {
@@ -657,23 +745,6 @@ body.debug .nav {
 }
 .page6 .photo-caption {
     text-align: right;
-}
-.page6 .chinese-text {
-    text-align: right;
-}
-.page6 .content {
-    padding-top: 720px;
-    .photo-paper {
-        position: absolute;
-        top: 0;
-        margin-right: 5%;
-    }
-    &.horizontal {
-        padding-top: 640px;
-        .photo-paper {
-            top: 60px;
-        }
-    }
 }
 .page6 .photo-1 {
     margin-left: 2%;
