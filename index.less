@@ -100,7 +100,7 @@ body.debug .nav {
             }
         }
         .chinese-text {
-            left: 3%;
+            left: 80px;
         }
     }
 }
@@ -149,10 +149,20 @@ body.debug .nav {
     height: 143px;
     background: url(res/dotted-line-2.png) no-repeat left top;
 }
+.dotted-line-2-2 {
+    width: 169px;
+    height: 257px;
+    background: url(res/dotted-line-2-2.png) no-repeat left top;
+}
 .dotted-line-3 {
     width: 72px;
     height: 53px;
     background: url(res/dotted-line-3.png) no-repeat left top;
+}
+.dotted-line-3-2 {
+    width: 122px;
+    height: 98px;
+    background: url(res/dotted-line-3-2.png) no-repeat left top;
 }
 .dotted-line-4 {
     width: 129px;
@@ -463,9 +473,10 @@ body.debug .nav {
     }
     100% {
         opacity: 1;
-        -webkit-transform: rotate(10deg);
-        transform: rotate(10deg);
-        margin-left: 80px;
+        -webkit-transform: rotate(6deg);
+        transform: rotate(6deg);
+        margin-left: 40px;
+        margin-bottom: 40px;
     }
 }
 @-webkit-keyframes rollIn2 {
@@ -476,9 +487,10 @@ body.debug .nav {
     }
     100% {
         opacity: 1;
-        -webkit-transform: rotate(5deg);
-        transform: rotate(5deg);
-        margin-left: 40px;
+        -webkit-transform: rotate(3deg);
+        transform: rotate(3deg);
+        margin-left: 20px;
+        margin-bottom: 40px;
     }
 }
 @-webkit-keyframes typing {
@@ -533,27 +545,28 @@ body.debug .nav {
     transform: scale(0.3);
     -webkit-animation-duration: 50s;
 }
-.page1 .page-label {
-    position: absolute;
-    right: 2%;
-    top: 2%;
-}
 .page1 {
     .content {
         margin-top: 60px;
         margin-bottom: 150px;
     }
-    &.horizontal {
-        .content {
-            margin-top: 100px;
-        }
+    .page-label {
+        position: absolute;
+        right: 40px;
+        top: 40px;
     }
     .chinese-text {
         top: 750px;
     }
     &.horizontal {
+        .content {
+            margin-top: 140px;
+        }
         .chinese-text {
             top: 680px;
+        }
+        .dotted-line-1 {
+            top: 670px;
         }
     }
 }
@@ -578,88 +591,123 @@ body.debug .nav {
             margin-top: 80px;
         }
         .chinese-text {
-            top: 700px;
+            top: 640px;
+        }
+        .dotted-line-2 {
+            display: none;
+        }
+        .dotted-line-2-2 {
+            display: block;
+            position: absolute;
+            top: 540px;
+            right: 40px;
         }
     }
     .chinese-text {
         top: 750px;
     }
-}
-.page2 .page-label {
-    position: absolute;
-    left: 2%;
-    bottom: 2%;
-}
-.page2 .moving-train {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
-.page2 .dotted-line-2 {
-    position: absolute;
-    top: 640px;
-    right: 100px;
-}
-.page2 .luggage-bag {
-    display: inline-block;
-    vertical-align: middle;
-}
-.page3 {
-    .content {
-        margin-top: 80px;
+    .page-label {
+        position: absolute;
+        left: 2%;
+        bottom: 2%;
     }
+    .moving-train {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    .dotted-line-2 {
+        position: absolute;
+        top: 640px;
+        right: 100px;
+    }
+    .dotted-line-2-2 {
+        display: none;
+    }
+    .luggage-bag {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.page3 {
     &.horizontal {
         .content {
-            margin-top: 80px;
+            margin-top: 150px;
         }
         .chinese-text {
             top: 680px;
         }
+        .dotted-line-3 {
+            display: none;
+        }
+        .dotted-line-3-2 {
+            display: block;
+            position: absolute;
+            top: 110px;
+            left: 90px;
+        }
+    }
+    .content {
+        margin-top: 80px;
     }
     .chinese-text {
         top: 760px;
     }
-}
-.page3 .iron-tower {
-    position: absolute;
-    top: 30px;
-    left: 190px;
-}
-.page3 .cloud-kit-2 {
-    position: absolute;
-    right: 80px;
-    top: 40px;
-}
-.page3 .dotted-line-3 {
-    position: absolute;
-    top: 100px;
-    left: 140px;
-}
-.page3 .photo-caption {
-    text-align: right;
-}
-.page3 .page-label {
-    position: absolute;
-    left: 12%;
-    bottom: 2%;
-}
-.page3 .fella-back {
-    position: absolute;
-    bottom: 0;
-    right: 10%;
+    .iron-tower {
+        position: absolute;
+        top: 30px;
+        left: 190px;
+    }
+    .cloud-kit-2 {
+        position: absolute;
+        right: 80px;
+        top: 40px;
+    }
+    .dotted-line-3 {
+        position: absolute;
+        top: 100px;
+        left: 140px;
+    }
+    .dotted-line-3-2 {
+        display: none;
+    }
+    .photo-caption {
+        text-align: right;
+    }
+    .page-label {
+        position: absolute;
+        left: 12%;
+        bottom: 2%;
+    }
+    .fella-back {
+        position: absolute;
+        bottom: 0;
+        right: 10%;
+    }
 }
 .page4 {
-    .content {
-        margin-top: 80px;
-    }
     &.horizontal {
         .content {
             margin-top: 100px;
         }
+        .photo-caption {
+            margin-right: 0;
+            margin-bottom: 160px;
+        }
         .chinese-text {
-            right: 3%;
+            right: 40px;
             top: 200px;
         }
+        .flying-plane {
+            top: 100px;
+        }
+        .dotted-line-4 {
+            top: 160px;
+        }
+    }
+    .content {
+        margin-top: 80px;
     }
     .photo-caption {
         margin-right: -20px;
@@ -675,30 +723,36 @@ body.debug .nav {
         top: 150px;
         text-align: right;
     }
-}
-.page4 .flying-plane {
-    position: absolute;
-    top: 30px;
-    left: 80px;
-}
-.page4 .dotted-line-4 {
-    position: absolute;
-    top: 90px;
-    left: 100px;
-}
-.page4 .photo-caption {
-    text-align: right;
+    .flying-plane {
+        position: absolute;
+        top: 30px;
+        left: 80px;
+    }
+    .dotted-line-4 {
+        position: absolute;
+        top: 90px;
+        left: 100px;
+    }
+    .photo-caption {
+        text-align: right;
+    }
 }
 .page5 {
     .content {
         margin-top: 80px;
     }
     &.horizontal {
+        .page-label {
+            top: 80px;
+        }
         .content {
-            margin-top: 120px;
+            margin-top: 180px;
+        }
+        .luggage-box {
+            margin-right: 20px;
         }
         .chinese-text {
-            right: 3%;
+            right: 80px;
             top: 750px;
         }
     }
@@ -707,28 +761,28 @@ body.debug .nav {
         top: 800px;
         text-align: right;
     }
-}
-.page5 .page-label {
-    position: absolute;
-    top: 20px;
-    left: 10%;
-}
-.page5 .luggage-box {
-    float: right;
-    margin-left: 10px;
-}
-.page5 .photo-caption {
-    text-align: right;
-}
-.page5 .chinese-text p {
-    margin: 0 0 0 auto;
-}
-.page5 .back-walk {
-    position: absolute;
-    -webkit-transform: scale(2);
-    -webkit-transform-origin: left bottom;
-    left: 100px;
-    top: 800px;
+    .page-label {
+        position: absolute;
+        top: 20px;
+        left: 10%;
+    }
+    .luggage-box {
+        float: right;
+        margin-left: 10px;
+    }
+    .photo-caption {
+        text-align: right;
+    }
+    .chinese-text p {
+        margin: 0 0 0 auto;
+    }
+    .back-walk {
+        position: absolute;
+        -webkit-transform: scale(2);
+        -webkit-transform-origin: left bottom;
+        left: 100px;
+        top: 800px;
+    }
 }
 .page6 {
     .content {
@@ -780,8 +834,15 @@ body.debug .nav {
         -webkit-transform-origin: bottom left;
     }
     &.horizontal {
+        .page-label {
+            top: 80px;
+        }
+        .photo-caption {
+            margin-right: 20px;
+        }
         .content {
-            padding-top: 640px;
+            margin-top: 140px;
+            padding-top: 560px;
             .photo-paper {
                 top: 60px;
                 width: 500px;
@@ -795,7 +856,7 @@ body.debug .nav {
             }
         }
         .chinese-text {
-            right: 3%;
+            right: 40px;
             top: 760px;
         }
     }
