@@ -64,7 +64,7 @@ body.debug .nav {
         text-align: left;
         .photo-paper {
             position: relative;
-            margin: 1em 0;
+            margin: 20px 0;
             width: 100%;
             height: 590px;
             background-color: #FFF;
@@ -85,7 +85,7 @@ body.debug .nav {
         }
     }
     .chinese-text {
-        left: 10%;
+        left: 80px;
     }
     &.horizontal {
         .content {
@@ -165,12 +165,16 @@ body.debug .nav {
     text-transform: uppercase;
 }
 .photo-caption h3 {
-    font-size: 1.5em;
+    font-size: 1.2em;
+}
+.photo-caption p {
+    font-size: 0.8em;
 }
 .chinese-text {
     position: absolute;
     text-align: left;
     margin: 10px 0;
+    font-size: .8em;
     line-height: 1.4;
 }
 .iron-tower {
@@ -461,6 +465,7 @@ body.debug .nav {
         opacity: 1;
         -webkit-transform: rotate(10deg);
         transform: rotate(10deg);
+        margin-left: 80px;
     }
 }
 @-webkit-keyframes rollIn2 {
@@ -473,6 +478,7 @@ body.debug .nav {
         opacity: 1;
         -webkit-transform: rotate(5deg);
         transform: rotate(5deg);
+        margin-left: 40px;
     }
 }
 @-webkit-keyframes typing {
@@ -500,7 +506,7 @@ body.debug .nav {
     bottom: 0;
 }
 .page-cover .cover-headline {
-    margin-top: 200px;
+    margin-top: 160px;
 }
 .page-cover .cloud-kit {
     position: absolute;
@@ -509,7 +515,7 @@ body.debug .nav {
     margin-bottom: -154px;
 }
 .page-cover .cloud-1 {
-    top: 50px;
+    top: 80px;
     -webkit-animation-duration: 30s;
 }
 .page-cover .cloud-2 {
@@ -534,6 +540,7 @@ body.debug .nav {
 }
 .page1 {
     .content {
+        margin-top: 60px;
         margin-bottom: 150px;
     }
     &.horizontal {
@@ -542,7 +549,7 @@ body.debug .nav {
         }
     }
     .chinese-text {
-        top: 760px;
+        top: 750px;
     }
     &.horizontal {
         .chinese-text {
@@ -552,13 +559,18 @@ body.debug .nav {
 }
 .page1 .fella-luggage {
     position: absolute;
-    right: 150px;
-    bottom: 0;
+    top: 760px;
+    right: 210px;
 }
 .page1 .dotted-line-1 {
     position: absolute;
-    right: 50px;
-    bottom: 0;
+    right: 120px;
+    top: 750px;
+}
+.page2 {
+    .content {
+        margin-top: 50px;
+    }
 }
 .page2 {
     &.horizontal {
@@ -570,7 +582,7 @@ body.debug .nav {
         }
     }
     .chinese-text {
-        top: 780px;
+        top: 750px;
     }
 }
 .page2 .page-label {
@@ -585,8 +597,8 @@ body.debug .nav {
 }
 .page2 .dotted-line-2 {
     position: absolute;
-    right: 10%;
-    bottom: 180px;
+    top: 640px;
+    right: 100px;
 }
 .page2 .luggage-bag {
     display: inline-block;
@@ -594,7 +606,7 @@ body.debug .nav {
 }
 .page3 {
     .content {
-        margin-top: 40px;
+        margin-top: 80px;
     }
     &.horizontal {
         .content {
@@ -605,23 +617,23 @@ body.debug .nav {
         }
     }
     .chinese-text {
-        top: 800px;
+        top: 760px;
     }
 }
 .page3 .iron-tower {
     position: absolute;
     top: 30px;
-    left: 150px;
+    left: 190px;
 }
 .page3 .cloud-kit-2 {
     position: absolute;
-    right: 10%;
-    top: 20px;
+    right: 80px;
+    top: 40px;
 }
 .page3 .dotted-line-3 {
     position: absolute;
     top: 100px;
-    left: 100px;
+    left: 140px;
 }
 .page3 .photo-caption {
     text-align: right;
@@ -638,7 +650,7 @@ body.debug .nav {
 }
 .page4 {
     .content {
-        margin-top: 30px;
+        margin-top: 80px;
     }
     &.horizontal {
         .content {
@@ -650,16 +662,17 @@ body.debug .nav {
         }
     }
     .photo-caption {
+        margin-right: -20px;
         margin-bottom: 100px;
     }
     .page-label {
         position: absolute;
         bottom: 30px;
-        left: 40%;
+        left: 230px;
     }
     .chinese-text {
-        right: 10%;
-        top: 140px;
+        right: 60px;
+        top: 150px;
         text-align: right;
     }
 }
@@ -671,7 +684,7 @@ body.debug .nav {
 .page4 .dotted-line-4 {
     position: absolute;
     top: 90px;
-    left: 80px;
+    left: 100px;
 }
 .page4 .photo-caption {
     text-align: right;
@@ -690,8 +703,8 @@ body.debug .nav {
         }
     }
     .chinese-text {
-        right: 10%;
-        top: 850px;
+        right: 80px;
+        top: 800px;
         text-align: right;
     }
 }
@@ -712,19 +725,59 @@ body.debug .nav {
 }
 .page5 .back-walk {
     position: absolute;
-    zoom: 2;
-    left: 12%;
-    bottom: 0;
+    -webkit-transform: scale(2);
+    -webkit-transform-origin: left bottom;
+    left: 100px;
+    top: 800px;
 }
 .page6 {
     .content {
-        margin-top: 50px;
-        padding-top: 720px;
+        margin-left: 40px;
+        margin-top: 100px;
+        padding-top: 620px;
         .photo-paper {
             position: absolute;
             top: 0;
             margin-right: 5%;
+            width: 470px;
+            height: 550px;
+            .photo {
+                width: 430px;
+                height: 510px;
+            }
         }
+    }
+    .chinese-text {
+        right: 10%;
+        top: 780px;
+        text-align: right;
+    }
+    .page-label {
+        position: absolute;
+        right: 10%;
+        top: 50px;
+    }
+    .photo-caption {
+        margin-right: -60px;
+        text-align: right;
+    }
+    .photo-1 {
+        margin-left: 2%;
+        -webkit-animation-name: rollIn1;
+    }
+    .photo-2 {
+        margin-left: 2%;
+        -webkit-animation-name: rollIn2;
+    }
+    .photo-3 {
+
+    }
+    .bike-girl {
+        position: absolute;
+        left: 80px;
+        top: 820px;
+        -webkit-transform: scale(2);
+        -webkit-transform-origin: bottom left;
     }
     &.horizontal {
         .content {
@@ -746,35 +799,4 @@ body.debug .nav {
             top: 760px;
         }
     }
-    .chinese-text {
-        right: 10%;
-        top: 860px;
-        text-align: right;
-    }
-}
-.page6 .page-label {
-    position: absolute;
-    right: 10%;
-    top: 20px;
-}
-.page6 .photo-caption {
-    text-align: right;
-}
-.page6 .photo-1 {
-    margin-left: 2%;
-    -webkit-animation-name: rollIn1;
-}
-.page6 .photo-2 {
-    margin-left: 2%;
-    -webkit-animation-name: rollIn2;
-}
-.page6 .photo-3 {
-
-}
-.page6 .bike-girl {
-    position: absolute;
-    left: 12%;
-    bottom: 10px;
-    -webkit-transform: scale(2);
-    -webkit-transform-origin: bottom left;
 }
