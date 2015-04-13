@@ -47,6 +47,7 @@ body.debug .nav {
 
 .page {
     position: absolute;
+    overflow: hidden;
     width: 100%;
     height: 100%;
     background: url(res/bg.jpg) repeat-y center center;
@@ -337,10 +338,10 @@ body.debug .nav {
     -webkit-animation-iteration-count: infinite;
 }
 .rotate-earth {
-    width: 640px;
-    height: 344px;
-    -webkit-animation: earth-rotate 10s;
-    -webkit-animation-iteration-count: infinite;
+    width: 468px;
+    height: 468px;
+    background: url(res/earth.png) no-repeat center center;
+    -webkit-animation: earth-rotate 10s linear infinite;
 }
 .typing {
     display: block;
@@ -431,41 +432,11 @@ body.debug .nav {
     }
 }
 @-webkit-keyframes earth-rotate {
-    0% {
-        background-image: url(res/earth/earth1.png);
+    from {
+        -webkit-transform: rotate(0deg);
     }
-    9% {
-        background-image: url(res/earth/earth2.png);
-    }
-    18% {
-        background-image: url(res/earth/earth3.png);
-    }
-    27% {
-        background-image: url(res/earth/earth4.png);
-    }
-    36% {
-        background-image: url(res/earth/earth5.png);
-    }
-    45% {
-        background-image: url(res/earth/earth6.png);
-    }
-    54% {
-        background-image: url(res/earth/earth7.png);
-    }
-    63% {
-        background-image: url(res/earth/earth8.png);
-    }
-    72% {
-        background-image: url(res/earth/earth9.png);
-    }
-    81% {
-        background-image: url(res/earth/earth10.png);
-    }
-    90% {
-        background-image: url(res/earth/earth11.png);
-    }
-    100% {
-        background-image: url(res/earth/earth1.png);
+    to {
+        -webkit-transform: rotate(360deg);
     }
 }
 @-webkit-keyframes rollIn1 {
@@ -520,6 +491,9 @@ body.debug .nav {
     width: 100%;
     bottom: 0;
 }
+.page-cover .rotate-earth {
+    margin-bottom: -200px;
+}
 .page-cover .cover-headline {
     margin-top: 160px;
 }
@@ -529,7 +503,7 @@ body.debug .nav {
 .page-cover .walk-fella {
     position: relative;
     z-index: 1;
-    margin-bottom: -154px;
+    margin-bottom: -84px;
 }
 .page-cover .cloud-1 {
     top: 80px;
@@ -580,6 +554,7 @@ body.debug .nav {
     }
     .fella-luggage {
         position: absolute;
+        z-index: 1;
         top: 760px;
         right: 220px;
     }
