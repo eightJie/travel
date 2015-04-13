@@ -83,7 +83,7 @@
     	transform: translateX(0);
     }
 }
-@keyframes flyInLeft{
+@keyframes flyInRight{
     0% {
     	-webkit-transform: translateX(1000px);
     	transform: translateX(1000px);
@@ -91,5 +91,29 @@
     100%{
     	-webkit-transform: translateX(0);
     	transform: translateX(0);
+    }
+}
+
+.flyInDown{
+    .ani-name(flyInDown);
+}
+@-webkit-keyframes flyInDown{
+    0% {
+        -webkit-transform: translateY(-1000px);
+        transform: translateY(-1000px);
+    }
+    100%{
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+@keyframes flyInDown{
+    0% {
+        -webkit-transform: translateX(1000px);
+        transform: translateX(1000px);
+    }
+    100%{
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
     }
 }
