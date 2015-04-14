@@ -13,6 +13,9 @@
  --></head>
 <body>
 <div class="wrap">
+	 <div id="loading" class="loading-wrap">
+	 	<div class="loading animated infinite block rotate-x duration-2"></div>
+	 </div>
 	 <div class="swiper-container">
         <div class="swiper-wrapper">
             <div id="swiper_item_1" class="swiper-slide">
@@ -67,7 +70,7 @@
 			</div>
 		</div>
 		<div class="animated flyInRight duration-3 delay-0d5 fella-luggage"></div>
-		<div class="dotted-line-1"></div>
+		<div class="dotted-line-1 animated fadeIn duration-2 delay-1d5"></div>
 	</div>
 </script>
 <script type="text/tmpl" id="swiper_tmpl_3">
@@ -88,8 +91,8 @@
 		</div>
 		<div class="page-label-2"></div>
 		<div class="animated slideInRight order3 moving-train duration-2"></div>
-		<div class="animated dotted-line-2"></div>
-		<div class="animated dotted-line-2-2"></div>
+		<div class="dotted-line-2 animated fadeIn duration-2 delay-1d5"></div>
+		<div class="dotted-line-2-2 animated fadeIn duration-2 delay-1d5"></div>
 	</div>
 </script>
 <script type="text/tmpl" id="swiper_tmpl_4">
@@ -99,8 +102,8 @@
 			<p><span class="typing">旅行为了认识一座城市，一片风光，</span></p>
 			<p><span class="typing">一段历史，更为了认识真正的自己</span></p>
 		</div>
-		<div class="dotted-line-3"></div>
-		<div class="dotted-line-3-2"></div>
+		<div class="dotted-line-3 animated fadeIn duration-2 delay-1d5"></div>
+		<div class="dotted-line-3-2 animated fadeIn duration-2 delay-1d5"></div>
 		<div class="iron-tower"></div>
 		<div class="animated fadeIn order2 cloud-kit-2"></div>
 		<div class="content">
@@ -124,7 +127,7 @@
 			<p><span class="typing">在文明中感受人类的伟大</span></p>
 		</div>
 		<div class="animated flyInLeft order2 duration-2 flying-plane"></div>
-		<div class="dotted-line-4"></div>
+		<div class="dotted-line-4 animated fadeIn duration-2 delay-2"></div>
 		<div class="content">
 			<div class="animated fadeIn order3 duration-3 photo-caption">
 				<p>FEELING AS SMALL<br />
@@ -192,20 +195,20 @@
 <script src="lib/zepto/zepto.min.js"></script>
 <script src="lib/swiper/js/swiper.js"></script>
 <script>
+
+$(window).on('load', function(){
+
 	var isInit = true;
 	var mySwiper = new Swiper ('.swiper-container', {
       direction: 'vertical',
       onInit:function(s){
+      	$('.swiper-container').css('visibility', 'visible');
+    	$('#loading').remove();
+
       	showPage(s);
       },
       onSlideChangeEnd: function(s){
       	showPage(s);
-      	// $('.typing').each(function(i, ele) {
-      	// 	ele = $(ele);
-      	// 	var length = ele.text().length;
-      	// 	ele.parent().css('width', length + 'em');
-      	// 	ele.css('-webkit-animation-timing-function', 'steps(' + length + ', end)');
-      	// });
       }
     });
 
@@ -220,6 +223,8 @@
 
     	isInit = false;
     }
+
+});
 
 </script>
 </body>
