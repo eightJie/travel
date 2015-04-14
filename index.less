@@ -348,6 +348,9 @@ body.debug .nav {
     -webkit-animation: bike-girl 1s;
     -webkit-animation-iteration-count: infinite;
 }
+.walk-fella-wrap{
+    .ani-name(walk-fella-wrap);
+}
 .walk-fella {
     width: 121px;
     height: 238px;
@@ -367,6 +370,14 @@ body.debug .nav {
     margin: 0;
     // -webkit-animation-name: typing;
     // -webkit-animation-duration: 0.5s;
+}
+@-webkit-keyframes walk-fella-wrap {
+    0% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
 }
 @-webkit-keyframes cloud {
     0% {
@@ -441,10 +452,11 @@ body.debug .nav {
 @-webkit-keyframes fella-walk {
     0% {
         background-image: url(res/fella1.png);
+        
     }
-    // 33% {
-    //     background-image: url(res/fella2.png);
-    // }
+    33% {
+        background-image: url(res/fella2.png);
+    }
     66%{
         background-image: url(res/fella3.png);
     }

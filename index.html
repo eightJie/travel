@@ -18,7 +18,7 @@
 	 </div>
 	 <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div id="swiper_item_1" class="swiper-slide">
+            <div id="swiper_item_1" class="swiper_item_1 swiper-slide">
             	<div class="page-cover page">
 					<a id="page-cover"></a>
 					<div class="cloud-1 cloud-kit"></div>
@@ -29,12 +29,14 @@
 					<div class="animated fadeIn order2 duration-2 cover-title"></div>
 					<div class="animated fadeInUp order3 cover-subtitle">2015.4.11</div>
 					<div class="animated fadeIn order4 walking-earth">
-						<div class="animated walk-fella"></div>
+						<div class="walk-fella-wrap animated delay-2">
+							<div class="animated walk-fella"></div>
+						</div>
 						<div class="animated rotate-earth"></div>
 					</div>
 				</div>
             </div>
-            <div id="swiper_item_2" class="swiper-slide">
+            <div id="swiper_item_2" class="swiper_item_2 swiper-slide">
             	<div class="page1 page">
 					<a id="page-1"></a>
 					<div class="chinese-text animated flyInLeft delay-2d5 duration-2">
@@ -55,7 +57,7 @@
 					<div class="dotted-line-1 animated fadeIn duration-2 delay-1d5"></div>
 				</div>
             </div>
-            <div id="swiper_item_3" class="swiper-slide">
+            <div id="swiper_item_3" class="swiper_item_3 swiper-slide">
             	<div class="page2 page">
 					<a id="page-2"></a>
 					<div class="chinese-text animated fadeIn delay-2 duration-2">
@@ -77,7 +79,7 @@
 					<div class="dotted-line-2-2 animated fadeIn duration-2 delay-1d5"></div>
 				</div>
             </div>
-            <div id="swiper_item_4" class="swiper-slide">
+            <div id="swiper_item_4" class="swiper_item_4 swiper-slide">
             	<div class="page3 page">
 					<a id="page-3"></a>
 					<div class="chinese-text animated fadeIn delay-1d5 duration-2">
@@ -101,7 +103,7 @@
 					<div class="animated slideInUp order2 fella-back"></div>
 				</div>
             </div>
-            <div id="swiper_item_5" class="swiper-slide">
+            <div id="swiper_item_5" class="swiper_item_5 swiper-slide">
             	<div class="page4 page">
 					<a id="page-4"></a>
 					<div class="chinese-text animated flyInRight delay-1 duration-2">
@@ -123,7 +125,7 @@
 					<div class="page-label-4"></div>
 				</div>
             </div>
-            <div id="swiper_item_6" class="swiper-slide">
+            <div id="swiper_item_6" class="swiper_item_6 swiper-slide">
             	<div class="page5 page">
 					<a id="page-5"></a>
 					<div class="chinese-text animated fadeIn delay-1d5 duration-2">
@@ -146,7 +148,7 @@
 					</div>
 				</div>
             </div>
-            <div id="swiper_item_7" class="swiper-slide">
+            <div id="swiper_item_7" class="swiper_item_7 swiper-slide">
             	<div class="page6 page">
 					<a id="page-6"></a>
 					<div class="chinese-text animated flyInRight delay-3 duration-2">
@@ -195,17 +197,19 @@ $(window).on('load', function(){
       },
       onSlideChangeEnd: function(s){
       	showAni(s);
-      }
+      },
+      loop: true,
+      loopedSlides: 7
     });
 
     function showAni(mySwiper){
-    	var curIndex = mySwiper.activeIndex;
+    	var curIndex = mySwiper.activeIndex % 7;
     	var curNum = curIndex + 1;
-    	var preIndex = mySwiper.previousIndex;
+    	var preIndex = mySwiper.previousIndex % 7;
 
-    	$('#swiper_item_' + curNum).find('.animated').addClass('block');
+    	$('.swiper_item_' + curNum).find('.animated').addClass('block');
     	if(preIndex != curIndex)
-		    $('#swiper_item_' + (preIndex+1)).find('.animated').removeClass('block');
+		    $('.swiper_item_' + (preIndex+1)).find('.animated').removeClass('block');
 
     	isInit = false;
     }
