@@ -86,7 +86,7 @@
 					</div>
 					<div class="dotted-line-3 animated fadeIn duration-2 delay-1d5"></div>
 					<div class="dotted-line-3-2 animated fadeIn duration-2 delay-1d5"></div>
-					<div class="iron-tower"></div>
+					<div class="iron-tower animated fadeIn order2 duration-10"></div>
 					<div class="animated fadeIn order2 cloud-kit-2"></div>
 					<div class="content">
 						<div class="animated fadeIn duration-2 order3 photo-caption">
@@ -180,40 +180,6 @@
 
 <script src="lib/zepto/zepto.min.js"></script>
 <script src="lib/swiper/js/swiper.js"></script>
-<script>
-
-$(window).on('load', function(){
-
-	var isInit = true;
-	var mySwiper = new Swiper ('.swiper-container', {
-      direction: 'vertical',
-      onInit:function(s){
-      	$('.swiper-container').css('visibility', 'visible');
-    	$('#loading').remove();
-
-      	showAni(s);
-      },
-      onSlideChangeEnd: function(s){
-      	showAni(s);
-      },
-      loop: true,
-      loopedSlides: 7
-    });
-
-    function showAni(mySwiper){
-    	var curIndex = mySwiper.activeIndex % 7;
-    	var curNum = curIndex + 1;
-    	var preIndex = mySwiper.previousIndex % 7;
-
-    	$('.swiper_item_' + curNum).find('.animated').addClass('block');
-    	if(preIndex != curIndex)
-		    $('.swiper_item_' + (preIndex+1)).find('.animated').removeClass('block');
-
-    	isInit = false;
-    }
-
-});
-
-</script>
+<script src="index.js"></script>
 </body>
 </html>

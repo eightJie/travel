@@ -137,6 +137,26 @@
 	        transition-timing-function: linear;
 }
 
+.animated.linear{
+	-webkit-transition-timing-function: linear;
+	        transition-timing-function: linear;
+}
+
+.ani-name(@name){
+	-webkit-animation-name: @name;
+	animation-name: @name;
+}
+
+.ani-time-func(@type){
+	-webkit-animation-timing-function: @type;
+	animation-timing-function: @type;
+}
+
+.ani-delay(@time){
+	-webkit-animation-delay: @time;
+	animation-delay: @time;
+}
+
 /**
  * 顺时针旋转
  */
@@ -289,6 +309,50 @@
 	animation-timing-function: ease-out;
 }
 
+
+.animated.flyInLeft{
+	.ani-name(flyInLeft);
+}
+@-webkit-keyframes flyInLeft{
+    0% {
+    	-webkit-transform: translateX(-1000px);
+    	transform: translateX(-1000px);
+    }
+    100%{
+    	// -webkit-transform: translateX(0);
+    	// transform: translateX(0);
+    }
+}
+@keyframes flyInLeft{
+    0% {
+    	-webkit-transform: translateX(-1000px);
+    	transform: translateX(-1000px);
+    }
+    100%{
+    	// -webkit-transform: translateX(0);
+    	// transform: translateX(0);
+    }
+}
+
+.animated.flyOutLeft{
+	.ani-name(flyOutLeft);
+}
+@-webkit-keyframes flyOutLeft{
+    0% {
+    }
+    100%{
+    	-webkit-transform: translateX(-1000px);
+    	transform: translateX(-1000px);
+    }
+}
+@keyframes flyOutLeft{
+    0% {
+    }
+    100%{
+    	-webkit-transform: translateX(-1000px);
+    	transform: translateX(-1000px);
+    }
+}
 
 
 
