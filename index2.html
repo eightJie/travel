@@ -1,162 +1,219 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=640, target-densitydpi=device-dpi, user-scalable=0" />
-	<link rel="stylesheet" href="bower_components/animate.css/animate.min.css" />
-	<link rel="stylesheet" href="index.css" />
-	<script src="bower_components/zepto/zepto.min.js"></script>
-	<script src="index.js"></script>
+	<meta name="viewport" content="width=640, target-densitydpi=device-dpi, user-scalable=0"  />
+	<title>旅行</title>
+	<link rel="stylesheet" type="text/css" href="lib/animate/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="lib/swiper/css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="ani.css">
+	<link rel="stylesheet" type="text/css" href="index.css">
 </head>
-<body class="debug">
-<div class="nav">
-	<ul>
-		<li><a href="#page-cover">0</a></li>
-		<li><a href="#page-1">1</a></li>
-		<li><a href="#page-2">2</a></li>
-		<li><a href="#page-3">3</a></li>
-		<li><a href="#page-4">4</a></li>
-		<li><a href="#page-5">5</a></li>
-		<li><a href="#page-6">6</a></li>
-	</ul>
+<body>
+<div class="wrap">
+	 <div id="loading" class="loading-wrap">
+	 	<div class="loading animated infinite block rotate-x duration-2"></div>
+	 </div>
+	 <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div id="swiper_item_1" class="swiper_item_1 swiper-slide">
+            	<div class="page-cover page">
+					<a id="page-cover"></a>
+					<div class="cloud-1 cloud-kit"></div>
+					<div class="cloud-2 cloud-kit"></div>
+					<div class="cloud-3 cloud-kit"></div>
+					<div class="cloud-4 cloud-kit"></div>
+					<div class="animated bounceIn order1 duration-2 cover-headline">放下一切</div>
+					<div class="animated fadeIn order2 duration-2 cover-title"></div>
+					<div class="animated fadeInUp order3 cover-subtitle">2015.4.11</div>
+					<div class="animated fadeIn order4 walking-earth">
+						<div class="walk-fella-wrap animated delay-2 duration-4">
+							<div class="animated walk-fella"></div>
+						</div>
+						<div class="animated rotate-earth"></div>
+					</div>
+				</div>
+            </div>
+            <div id="swiper_item_2" class="swiper_item_2 swiper-slide">
+            	<div class="page1 page horizontal">
+					<a id="page-1"></a>
+					<div class="chinese-text animated fadeIn delay-3 duration-2">
+						<p><span class="typing">抛开牵挂从忙碌中抽离</span></p>
+						<p><span class="typing">为一场自由出发</span></p>
+					</div>
+					<div class="page-label-1"></div>
+					<div class="content">
+						<div class="animated delay-2 duration-2 slideInLeft photo-caption">
+							<h3>ASIDE</h3>
+							<p>where ever to go</p>
+						</div>
+						<div class="animated flyInLeft duration-2 order1 photo-paper">
+							<span class="photo-wrapper animated fadeIn duration-4 order1"><span class="photo"><img src="res/photo1.jpg" /></span></span>
+						</div>
+					</div>
+					<div class="animated flyInRight duration-3 delay-0d5 fella-luggage"></div>
+					<div class="dotted-line-1 animated fadeIn duration-2 delay-1d5"></div>
+				</div>
+            </div>
+            <div id="swiper_item_3" class="swiper_item_3 swiper-slide">
+            	<div class="page2 page horizontal">
+					<a id="page-2"></a>
+					<div class="chinese-text animated fadeIn delay-2 duration-2">
+						<p><span class="typing">旅途中的一切都是未知</span></p>
+						<p><span class="typing">欢乐或悲伤都不期而遇</span></p>
+					</div>
+					<div class="content">
+						<div class="animated flyInDown duration-2 order1 photo-paper">
+							<span class="photo-wrapper animated fadeIn duration-4 order1"><span class="photo"><img src="res/photo2.jpg" /></span></span>
+						</div>
+						<div class="animated fadeIn duration-2 order2 photo-caption">
+							<h3>JOY AND SORROW</h3>
+							<p><span class="luggage-bag"></span> and next door neighbose.</p>
+						</div>
+					</div>
+					<div class="page-label-2"></div>
+					<div class="animated slideInRight order3 moving-train duration-3"></div>
+					<div class="dotted-line-2 animated fadeIn duration-2 delay-1d5"></div>
+					<div class="dotted-line-2-2 animated fadeIn duration-2 delay-1d5"></div>
+				</div>
+            </div>
+            <div id="swiper_item_4" class="swiper_item_4 swiper-slide">
+            	<div class="page3 page horizontal">
+					<a id="page-3"></a>
+					<div class="chinese-text animated fadeIn delay-1d5 duration-2">
+						<p><span class="typing">旅行为了认识一座城市，一片风光，</span></p>
+						<p><span class="typing">一段历史，更为了认识真正的自己</span></p>
+					</div>
+					<div class="dotted-line-3 animated fadeIn duration-2 delay-1d5"></div>
+					<div class="dotted-line-3-2 animated fadeIn duration-2 delay-1d5"></div>
+					<div class="iron-tower"></div>
+					<div class="animated fadeIn order2 cloud-kit-2"></div>
+					<div class="content">
+						<div class="animated fadeIn duration-2 order3 photo-caption">
+							<h3>TRAVEL</h3>
+							<p>TRAVEL IS TO KNOW A CITY</p>
+						</div>
+						<div class="animated zoomSmIn order1 duration-2 photo-paper">
+							<span class="photo-wrapper animated fadeIn duration-4"><span class="photo"><img src="res/photo3.jpg" /></span></span>
+						</div>
+					</div>
+					<div class="page-label-3"></div>
+					<div class="animated slideInUp order2 fella-back"></div>
+				</div>
+            </div>
+            <div id="swiper_item_5" class="swiper_item_5 swiper-slide">
+            	<div class="page4 page horizontal">
+					<a id="page-4"></a>
+					<div class="chinese-text animated fadeIn delay-3 duration-2">
+						<p><span class="typing">在自然中体会人类的渺小</span></p>
+						<p><span class="typing">在文明中感受人类的伟大</span></p>
+					</div>
+					<div class="animated flyInLeft order2 duration-3 flying-plane"></div>
+					<div class="dotted-line-4 animated fadeIn duration-2 delay-1"></div>
+					<div class="content">
+						<div class="animated fadeIn order3 duration-3 photo-caption">
+							<p>FEELING AS SMALL<br />
+							AS HUMANLY POSSIBLE<br />
+							THE NATURE</p>
+						</div>
+						<div class="animated flyInLeft order1 duration-2 photo-paper">
+							<span class="photo-wrapper animated fadeIn duration-4"><span class="photo"><img src="res/photo4.jpg" /></span></span>
+						</div>
+					</div>
+					<div class="page-label-4"></div>
+				</div>
+            </div>
+            <div id="swiper_item_6" class="swiper_item_6 swiper-slide">
+            	<div class="page5 page horizontal">
+					<a id="page-5"></a>
+					<div class="chinese-text animated flyInRight delay-1d5 duration-2">
+						<p><span class="typing">寻找每一条路的过程</span></p>
+						<p><span class="typing">是在给未来搜索难忘的回忆</span></p>
+					</div>
+					<div class="page-label-5"></div>
+					<div class="content">
+						<div class="animated zoomSmIn duration-2 order1 photo-paper">
+							<span class="photo-wrapper animated fadeIn duration-4"><span class="photo"><img src="res/photo5.jpg" /></span></span>
+						</div>
+						<div class="animated fadeIn order4 luggage-box"></div>
+						<div class="animated fadeIn duration-3 order2 photo-caption">
+							<h3>BRING OUR</h3>
+							<p>FUTURE UNFORGETABLE<br />MEMORY</p>
+						</div>
+					</div>
+					<div class="animated fadeIn order2">
+						<div class="animated back-walk duration-4"></div>
+					</div>
+				</div>
+            </div>
+            <div id="swiper_item_7" class="swiper_item_7 swiper-slide">
+            	<div class="page6 page horizontal">
+					<a id="page-6"></a>
+					<div class="chinese-text animated flyInRight delay-3 duration-2">
+						<p><span class="typing">给自己一段放肆的时光</span></p>
+						<p><span class="typing">在旅程中领悟幸福</span></p>
+					</div>
+					<div class="page-label-6"></div>
+					<div class="content">
+						<div class="animated order1 photo-1 photo-paper">
+							<span class="photo-wrapper animated fadeIn duration-4"><span class="photo"><img src="res/photo6.jpg" /></span></span>
+						</div>
+						<div class="animated order3 photo-2 photo-paper">
+							<span class="photo-wrapper animated fadeIn duration-4"><span class="photo"><img src="res/photo7.jpg" /></span></span>
+						</div>
+						<div class="animated rollIn order5 photo-3 photo-paper">
+							<span class="photo-wrapper animated fadeIn duration-4"><span class="photo"><img src="res/photo8.jpg" /></span></span>
+						</div>
+						<div class="animated fadeIn delay-3 duration-2 photo-caption">
+							<h3>FEEL HAPPINESS</h3>
+							<p>IN THE JORNEY</p>
+						</div>
+					</div>
+					<div class="animated fadeIn delay-2 duration-2">
+						<div class="bike-girl animated duration-2"></div>
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="page-cover page">
-	<a id="page-cover"></a>
-	<div class="animated fadeIn cloud-1 cloud-kit"></div>
-	<div class="animated fadeIn cloud-2 cloud-kit"></div>
-	<div class="animated fadeIn cloud-3 cloud-kit"></div>
-	<div class="animated fadeIn cloud-4 cloud-kit"></div>
-	<div class="animated bounceIn order1 cover-headline">放下一切</div>
-	<div class="animated fadeIn order2 cover-title"></div>
-	<div class="animated fadeInUp order3 cover-subtitle">2015.4.11</div>
-	<div class="animated fadeIn order4 walking-earth">
-		<div class="animated walk-fella"></div>
-		<div class="animated rotate-earth"></div>
-	</div>
-</div>
-<div class="page1 page">
-	<a id="page-1"></a>
-	<div class="page-label"></div>
-	<div class="content">
-		<div class="photo-caption">
-			<h3>ASIDE</h3>
-			<p>where ever to go</p>
-		</div>
-		<div class="animated slideInLeft order1 photo-paper">
-			<span class="photo"><img src="res/photo1.jpg" /></span>
-		</div>
-		<div class="chinese-text">
-			<p><span class="animated typing order4">从忙碌中抽离，测试测测测试试试</span></p>
-			<p><span class="animated typing order5">为一场自由出发</span></p>
-		</div>
-		<div class="animated slideInRight order3 fella-luggage"></div>
-		<div class="animated fadeIn order2 dotted-line-1"></div>
-	</div>
-</div>
-<div class="page2 page">
-	<a id="page-2"></a>
-	<div class="content">
-		<div class="animated slideInRight order1 photo-paper">
-			<span class="photo"><img src="res/photo2.jpg" /></span>
-		</div>
-		<div class="animated fadeIn order4 photo-caption">
-			<h3>JOY AND SORROW</h3>
-			<p><span class="luggage-bag"></span> and next door neighbose.</p>
-		</div>
-		<div class="animated fadeIn order5 chinese-text">
-			<p>旅途中的一切都是未知<br />欢乐或悲伤都不期而遇</p>
-		</div>
-	</div>
-	<div class="page-label"></div>
-	<div class="animated fadeIn order3">
-		<div class="moving-train"></div>
-	</div>
-	<div class="animated slideInDown order2 dotted-line-2"></div>
-</div>
-<div class="page3 page">
-	<a id="page-3"></a>
-	<div class="animated fadeIn order1 dotted-line-3"></div>
-	<div class="animated fadeIn order1 iron-tower"></div>
-	<div class="animated fadeIn order2 cloud-kit-2"></div>
-	<div class="content">
-		<div class="animated fadeIn order3 photo-caption">
-			<h3>TRAVEL</h3>
-			<p>TRAVEL IS TO KNOW A CITY</p>
-		</div>
-		<div class="animated slideInLeft order3 photo-paper">
-			<span class="photo"><img src="res/photo3.jpg" /></span>
-		</div>
-		<div class="animated slideInLeft order4 chinese-text">
-			<p>旅行为了认识一座城市，一片风光，<br />一段历史，更为了认识真正的自己</p>
-		</div>
-	</div>
-	<div class="page-label"></div>
-	<div class="animated slideInUp order5 fella-back"></div>
-</div>
-<div class="page4 page">
-	<a id="page-4"></a>
-	<div class="animated slideInLeft order4 flying-plane"></div>
-	<div class="animated slideInLeft order4 dotted-line-4"></div>
-	<div class="content">
-		<div class="animated fadeIn order2 photo-caption">
-			<p>FEELING AS SMALL<br />
-			AS HUMANLY POSSIBLE<br />
-			THE NATURE</p>
-		</div>
-		<div class="animated slideInRight order3 chinese-text">
-			<p>文字文字文文文字文<br />字字文字字文字</p>
-		</div>
-		<div class="animated fadeIn order1 photo-paper">
-			<span class="photo"><img src="res/photo4.jpg" /></span>
-		</div>
-	</div>
-	<div class="page-label"></div>
-</div>
-<div class="page5 page">
-	<a id="page-5"></a>
-	<div class="page-label"></div>
-	<div class="content">
-		<div class="animated pulse order1 photo-paper">
-			<span class="photo"><img src="res/photo5.jpg" /></span>
-		</div>
-		<div class="animated fadeIn order4 luggage-box"></div>
-		<div class="animated slideInLeft order3 photo-caption">
-			<h3>BRING OUR</h3>
-			<p>FUTURE UNFORGETABLE<br />MEMORY</p>
-		</div>
-		<div class="order5 chinese-text">
-			<p><span class="animated typing">文文文不能是英文</span>></p>
-			<p><span class="animated typing">文字文文</span></p>
-		</div>
-	</div>
-	<div class="animated fadeIn order2">
-		<div class="back-walk"></div>
-	</div>
-</div>
-<div class="page6 page">
-	<a id="page-6"></a>
-	<div class="page-label"></div>
-	<div class="content">
-		<div class="animated order1 photo-1 photo-paper">
-			<span class="photo"><img src="res/photo6.jpg" /></span>
-		</div>
-		<div class="animated order2 photo-2 photo-paper">
-			<span class="photo"><img src="res/photo7.jpg" /></span>
-		</div>
-		<div class="animated rollIn order3 photo-3 photo-paper">
-			<span class="photo"><img src="res/photo8.jpg" /></span>
-		</div>
-		<div class="animated fadeIn order5 photo-caption">
-			<h3>FEEL HAPPINESS</h3>
-			<p>IN THE JORNEY</p>
-		</div>
-		<div class="animated slideInRight order6 chinese-text">
-			<p>文字文文文文文文<br />字字字字字字</p>
-		</div>
-	</div>
-	<div class="animated fadeIn order4">
-		<div class="bike-girl"></div>
-	</div>
-</div>
+
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/swiper/js/swiper.js"></script>
+<script>
+
+$(window).on('load', function(){
+
+	var isInit = true;
+	var mySwiper = new Swiper ('.swiper-container', {
+      direction: 'vertical',
+      onInit:function(s){
+      	$('.swiper-container').css('visibility', 'visible');
+    	$('#loading').remove();
+
+      	showAni(s);
+      },
+      onSlideChangeEnd: function(s){
+      	showAni(s);
+      },
+      loop: true,
+      loopedSlides: 7
+    });
+
+    function showAni(mySwiper){
+    	var curIndex = mySwiper.activeIndex % 7;
+    	var curNum = curIndex + 1;
+    	var preIndex = mySwiper.previousIndex % 7;
+
+    	$('.swiper_item_' + curNum).find('.animated').addClass('block');
+    	if(preIndex != curIndex)
+		    $('.swiper_item_' + (preIndex+1)).find('.animated').removeClass('block');
+
+    	isInit = false;
+    }
+
+});
+
+</script>
 </body>
 </html>
