@@ -1,6 +1,8 @@
 $(window).on('load', function(){
 
 	var isInit = true;
+	var PAGE_NUM = $('#main').find('.swiper-slide').length; 
+
 	var mySwiper = new Swiper ('.swiper-container', {
       direction: 'vertical',
       onInit:function(s){
@@ -13,19 +15,21 @@ $(window).on('load', function(){
       	showAni(s);
       },
       loop: true,
-      loopedSlides: 7
+      loopedSlides: PAGE_NUM
     });
 
     function showAni(mySwiper){
-    	var curIndex = mySwiper.activeIndex % 7;
+    	var curIndex = mySwiper.activeIndex % PAGE_NUM;
     	var curNum = curIndex + 1;
-    	var preIndex = mySwiper.previousIndex % 7;
+    	var preIndex = mySwiper.previousIndex % PAGE_NUM;
 
     	$('.swiper_item_' + curNum).find('.animated').addClass('block');
     	if(preIndex != curIndex)
 		    $('.swiper_item_' + (preIndex+1)).find('.animated').removeClass('block');
 
 		if(curNum == 7){
+			$('.seven-photos .photo-item').removeClass('flyOutLeft').addClass('flyInLeft delay');
+
 			new DyPager($(mySwiper.slides[mySwiper.activeIndex]).find('.seven-photos'), '.swiper-slide-active .seven-arrow.left', '.swiper-slide-active .seven-arrow.right');
 			setTimeout(function(){
 				$('.seven-arrow.left').css('opacity', 1);
@@ -151,7 +155,7 @@ $(window).on('load', function(){
 })(window);
 
 
-(function(){
+(function(win){
 	/**
 	 * 图片预加载
 	 * @param {[type]} imgs [description]
@@ -186,4 +190,5 @@ $(window).on('load', function(){
 
 	};
 
-})();
+	win.PreImgs = PreImgs;
+})(window);
