@@ -1386,6 +1386,7 @@ body.debug .nav {
 }
 .seven-photos .photo-item:nth-child(1) {
   -webkit-transform: rotateZ(0deg) translate3d(0, 0, 0);
+  transform: rotateZ(0deg) translate3d(0, 0, 0);
   z-index: 3;
 }
 .seven-photos .photo-item:nth-child(1).delay {
@@ -1394,6 +1395,7 @@ body.debug .nav {
 }
 .seven-photos .photo-item:nth-child(2) {
   -webkit-transform: rotateZ(4deg) translate3d(0, -20px, 0);
+  transform: rotateZ(4deg) translate3d(0, -20px, 0);
   z-index: 2;
 }
 .seven-photos .photo-item:nth-child(2).delay {
@@ -1402,6 +1404,7 @@ body.debug .nav {
 }
 .seven-photos .photo-item:nth-child(3) {
   -webkit-transform: rotateZ(8deg) translate3d(0, -40px, 0);
+  transform: rotateZ(8deg) translate3d(0, -40px, 0);
   z-index: 1;
 }
 .seven-photos .photo-item:nth-child(3).delay {
