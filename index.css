@@ -1342,15 +1342,30 @@ body.debug .nav {
     -transform: translateX(10px);
   }
 }
+.horizontal .seven-photos {
+  width: 500px;
+  height: 420px;
+  top: 220px;
+  left: 50px;
+}
+.horizontal .seven-photos .photo-item {
+  padding: 10px;
+  width: 480px;
+  height: 400px;
+}
 .seven-photos {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 453px;
-  height: 589px;
-  margin-left: -226.5px;
-  margin-top: -294.5px;
+  width: 470px;
+  height: 550px;
+  top: 140px;
+  left: 70px;
   z-index: 99;
+}
+.seven-photos .photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
 }
 .seven-photos .photo-item {
   -webkit-background-size: cover;
@@ -1360,16 +1375,16 @@ body.debug .nav {
   background-position: center;
   background-repeat: no-repeat;
   background-color: #efdeca;
-  border: 10px solid #fff;
+  padding: 20px;
+  background-color: #FFF;
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 430px;
+  height: 510px;
   -webkit-transform-origin: left bottom;
   transform-origin: left bottom;
 }
 .seven-photos .photo-item:nth-child(1) {
-  -webkit-transform: rotateZ(5deg) translate3d(-65px, -65px, 0);
-  transform: rotateZ(5deg) translate3d(-65px, -65px, 0);
+  -webkit-transform: rotateZ(0deg) translate3d(0, 0, 0);
   z-index: 3;
 }
 .seven-photos .photo-item:nth-child(1).delay {
@@ -1377,8 +1392,7 @@ body.debug .nav {
   animation-delay: 0.6s;
 }
 .seven-photos .photo-item:nth-child(2) {
-  -webkit-transform: rotateZ(7deg) translate3d(-40px, -40px, 0);
-  transform: rotateZ(7deg) translate3d(-40px, -40px, 0);
+  -webkit-transform: rotateZ(4deg) translate3d(0, -20px, 0);
   z-index: 2;
 }
 .seven-photos .photo-item:nth-child(2).delay {
@@ -1386,8 +1400,7 @@ body.debug .nav {
   animation-delay: 0.4s;
 }
 .seven-photos .photo-item:nth-child(3) {
-  -webkit-transform: rotateZ(8deg) translate3d(-10px, -10px, 0);
-  transform: rotateZ(8deg) translate3d(-10px, -10px, 0);
+  -webkit-transform: rotateZ(8deg) translate3d(0, -40px, 0);
   z-index: 1;
 }
 .seven-photos .photo-item:nth-child(3).delay {

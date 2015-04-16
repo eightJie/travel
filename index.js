@@ -46,7 +46,6 @@ $(window).on('load', function(){
 	function DyPager(selector, arrowLeft, arrowRight) {
 		this.container = $(selector);
 		this.items = this.container.children();
-		console.log(this.items)
 		this.arrowLeft = $(arrowLeft);
 		this.arrowRight = $(arrowRight);
 
