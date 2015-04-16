@@ -154,16 +154,26 @@
 						<p><span class="typing">在旅程中领悟幸福</span></p>
 					</div>
 					<div class="page-label-6"></div>
+					<div class="photos-wrap">
+						<div class="seven-arrow left animated infinite duration-f8"></div>
+						<div class="seven-photos">
+							<div class="photo-item animated flyInLeft duration-f8 delay photo-paper">
+								<span class="photo-wrapper"><span class="photo" style="background-image: url(res/photo6.jpg);"></span></span>
+							</div>
+							<div class="photo-item animated flyInLeft duration-f8 delay photo-paper">
+								<span class="photo-wrapper"><span class="photo" style="background-image: url(res/photo7.jpg);"></span></span>
+							</div>
+							<div class="photo-item animated flyInLeft duration-f8 delay photo-paper">
+								<span class="photo-wrapper"><span class="photo" style="background-image: url(res/photo8.jpg);"></span></span>
+							</div>
+<!-- 							<div class="photo-item animated flyInLeft duration-f8 delay" style="background-image: url(res/photo6.jpg);"></div>
+							<div class="photo-item animated flyInLeft duration-f8 delay" style="background-image: url(res/photo7.jpg);"></div>
+							<div class="photo-item animated flyInLeft duration-f8 delay" style="background-image: url(res/photo8.jpg);"></div>
+ -->						</div>
+						<div class="seven-arrow right animated infinite duration-f8"></div>
+					</div>
 					<div class="content">
-						<div class="animated order1 photo-1 photo-paper">
-							<span class="photo-wrapper animated fadeIn duration-4"><span class="photo"><img src="res/photo6.jpg" /></span></span>
-						</div>
-						<div class="animated order3 photo-2 photo-paper">
-							<span class="photo-wrapper animated fadeIn duration-4"><span class="photo"><img src="res/photo7.jpg" /></span></span>
-						</div>
-						<div class="animated rollIn order5 photo-3 photo-paper">
-							<span class="photo-wrapper animated fadeIn duration-4"><span class="photo"><img src="res/photo8.jpg" /></span></span>
-						</div>
+
 						<div class="animated fadeIn delay-3 duration-2 photo-caption">
 							<h3>FEEL HAPPINESS</h3>
 							<p>IN THE JORNEY</p>
@@ -180,40 +190,6 @@
 
 <script src="lib/zepto/zepto.min.js"></script>
 <script src="lib/swiper/js/swiper.js"></script>
-<script>
-
-$(window).on('load', function(){
-
-	var isInit = true;
-	var mySwiper = new Swiper ('.swiper-container', {
-      direction: 'vertical',
-      onInit:function(s){
-      	$('.swiper-container').css('visibility', 'visible');
-    	$('#loading').remove();
-
-      	showAni(s);
-      },
-      onSlideChangeEnd: function(s){
-      	showAni(s);
-      },
-      loop: true,
-      loopedSlides: 7
-    });
-
-    function showAni(mySwiper){
-    	var curIndex = mySwiper.activeIndex % 7;
-    	var curNum = curIndex + 1;
-    	var preIndex = mySwiper.previousIndex % 7;
-
-    	$('.swiper_item_' + curNum).find('.animated').addClass('block');
-    	if(preIndex != curIndex)
-		    $('.swiper_item_' + (preIndex+1)).find('.animated').removeClass('block');
-
-    	isInit = false;
-    }
-
-});
-
-</script>
+<script src="index.js"></script>
 </body>
 </html>
