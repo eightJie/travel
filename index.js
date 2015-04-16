@@ -25,9 +25,11 @@ $(window).on('load', function(){
     	if(preIndex != curIndex)
 		    $('.swiper_item_' + (preIndex+1)).find('.animated').removeClass('block');
 
-
 		if(curNum == 7){
-			new DyPager('.swiper-slide-active .photos-wrap', '.swiper-slide-active .seven-arrow.left', '.swiper-slide-active .seven-arrow.right');
+			new DyPager('.page6 .seven-photos', '.swiper-slide-active .seven-arrow.left', '.swiper-slide-active .seven-arrow.right');
+			setTimeout(function(){
+				$('.seven-arrow.left').css('opacity', 1);
+			}, 1000);
 		}
     	isInit = false;
     }
@@ -43,7 +45,7 @@ $(window).on('load', function(){
 
 	function DyPager(selector, arrowLeft, arrowRight) {
 		this.container = $(selector);
-		this.items = this.container.children();
+		this.items = this.container.children().slice(0, 3);
 		this.arrowLeft = $(arrowLeft);
 		this.arrowRight = $(arrowRight);
 
