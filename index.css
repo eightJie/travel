@@ -1277,6 +1277,7 @@ body.debug .nav {
   height: 64px;
   margin-left: -15px;
   margin-top: -32px;
+  top: 400px;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
